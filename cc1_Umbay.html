@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRC Honesty Store</title>
+</head>
+<body>
+
+<h2>SRC Honesty Store</h2>
+
+<p>Click on each item to add to your cart:</p>
+<ul>
+  <li onclick="totalP(10)">Burger: 5 pesos</li>
+  <li onclick="totalP(3)">Fries</li>
+  <li onclick="totalP(2)">Juice</li>
+</ul>
+
+<p>Click <span onclick="clearP()">clear</span> to reset your cart.</p>
+
+<h3>Total Price: $<span id="totalPrice">0</span></h3>
+
+<script>
+var totalPrice = 0;
+
+function totalP(price) {
+  totalPrice += price;
+  document.getElementById("totalPrice").innerText = totalPrice;
+}
+
+function clearP() {
+  totalPrice = 0;
+  document.getElementById("totalPrice").innerText = totalPrice;
+}
+</script>
+
+</body>
+</html>
